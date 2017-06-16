@@ -1,4 +1,4 @@
-export default function fyMap(originalArray, callback) {
+const fisherYatesMap = (originalArray, callback) => {
   let remaining = originalArray.length;
 
   const mappedArray = Array(remaining);
@@ -24,4 +24,12 @@ export default function fyMap(originalArray, callback) {
   }
 
   return mappedArray;
+};
+
+export default function fisherYatesMapWrapper(arrayOrCallback, callbackOrThisArg) {
+  if (this instanceof Array && typeof(arrayOrCallback) === 'function') {
+    return fisherYatesMap(this, arrayOrCallback);
+  }
+
+  return fisherYatesMap(arrayOrCallback, callbackOrThisArg);
 }

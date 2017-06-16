@@ -6,6 +6,7 @@
   "license": "MIT",
   "devDependencies": {
     "babel-jest": "^20.0.3",
+    "babel-plugin-transform-function-bind": "^6.22.0",
     "babel-preset-env": "^1.5.2",
     "jest": "^20.0.4"
   },
@@ -22,6 +23,19 @@
           }
         }
       ]
+    ],
+    "plugins": [
+      "transform-function-bind"
+    ]
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/__fixtures__/"
     ]
   }
 }

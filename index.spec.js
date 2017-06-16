@@ -1,18 +1,25 @@
-import fyMap from '.';
+import fisherYatesMap from '.';
 
-describe('fyMap', () => {
+describe('fisherYatesMap', () => {
   it('doesn\'t affect the return order', () => {
-    const array = Array.from(Array(12).keys());;
-    const callback = jest.fn((val, index) => index);
+    const array = Array.from(Array(12).keys());
+    const callback = jest.fn((val) => val);
 
-    expect(fyMap(array, callback)).toEqual(array);
+    expect(fisherYatesMap(array, callback)).toEqual(array);
   });
 
   it('calls back the right number of times', () => {
     const array = Array(50);
     const callback = jest.fn((val, index) => index);
 
-    fyMap(array, callback);
+    fisherYatesMap(array, callback);
     expect(callback).toHaveBeenCalledTimes(array.length);
+  });
+
+  it('can be called using the Babel bind syntax as well', () => {
+    const array = Array.from(Array(12).keys());
+    const callback = jest.fn((val) => val);
+
+    expect(array::fisherYatesMap(callback)).toEqual(array);
   });
 });
