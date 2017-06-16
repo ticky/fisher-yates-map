@@ -26,10 +26,10 @@ const fisherYatesMap = (originalArray, callback) => {
   return mappedArray;
 };
 
-export default function fisherYatesMapWrapper(arrayOrCallback, callbackOrThisArg) {
+export default function fisherYatesMapWrapper(arrayOrCallback, maybeCallback) {
   if (this instanceof Array && typeof(arrayOrCallback) === 'function') {
     return fisherYatesMap(this, arrayOrCallback);
   }
 
-  return fisherYatesMap(arrayOrCallback, callbackOrThisArg);
+  return fisherYatesMap(arrayOrCallback, maybeCallback);
 }
