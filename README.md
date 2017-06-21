@@ -1,5 +1,7 @@
 # Fisher-Yates Map
 
+[![npm](https://img.shields.io/npm/v/fisher-yates-map.svg?maxAge=2592000)](https://www.npmjs.com/package/fisher-yates-map) ![fisher-yates-map](https://img.shields.io/npm/l/fisher-yates-map.svg?maxAge=2592000) [![Build Status](https://travis-ci.org/ticky/fisher-yates-map.svg?branch=master)](https://travis-ci.org/ticky/fisher-yates-map) [![codecov](https://codecov.io/gh/ticky/fisher-yates-map/branch/master/graph/badge.svg)](https://codecov.io/gh/ticky/fisher-yates-map)
+
 A map implementation which calls the callback for each element in a random order
 
 ## Usage

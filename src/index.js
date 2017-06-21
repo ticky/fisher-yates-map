@@ -27,7 +27,7 @@ const fisherYatesMap = (originalArray, callback) => {
 };
 
 export default function fisherYatesMapWrapper(arrayOrCallback, maybeCallback) {
-  if (this instanceof Array && typeof(arrayOrCallback) === 'function') {
+  if (this instanceof Array && typeof arrayOrCallback === 'function') {
     return fisherYatesMap(this, arrayOrCallback);
   }
 

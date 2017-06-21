@@ -1,3 +1,4 @@
+/* global describe, it, expect, jest */
 import fisherYatesMap from '.';
 
 describe('fisherYatesMap', () => {

@@ -4,10 +4,19 @@
   "main": "index.js",
   "author": "Jessica Stokes <hello@jessicastokes.net>",
   "license": "MIT",
+  "scripts": {
+    "prepublish": "babel src --out-dir . --source-maps inline --ignore \"**/*.spec.js\"",
+    "test": "jest",
+    "lint": "eslint src",
+    "lint-and-fixup": "eslint --fix src"
+  },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.2.3",
     "babel-jest": "^20.0.3",
     "babel-plugin-transform-function-bind": "^6.22.0",
     "babel-preset-env": "^1.5.2",
+    "eslint": "^4.0.0",
     "jest": "^20.0.4"
   },
   "babel": {
